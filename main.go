@@ -24,6 +24,7 @@ func main() {
 	}
 
 	server.Run()
+	logger.SetLevel(LevelInfo)
 
 	logger.Info("godns %s start", settings.Version)
 
