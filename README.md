@@ -1,3 +1,10 @@
+
+## 添加Dockerfile
+  *  docker run --name godnslocal --restart always -p 53:53 -v /etc/hosts:/etc/hosts  -d  godnsimg:v0.0.1
+
+
+
+
 GODNS
 ====
 
