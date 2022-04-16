@@ -1,6 +1,6 @@
 
 ## 添加Dockerfile
-  *  docker run --name godnslocal2 --restart always -p 23153:53 -v /etc/hosts:/etc/hosts  godnsimg:v0.0.1
+  *  docker run --name godnslocal --restart always -p 23153:53 -v /etc/hosts:/etc/hosts  -d  godnsimg:v0.0.1
 
 
 
