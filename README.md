@@ -3,6 +3,14 @@
   *  docker run --name godnslocal --restart always -p 23153:53 -v /etc/hosts:/etc/hosts  -d  godnsimg:v0.0.1
 
 
+## docker化改造完成,注意事项
+  * 1, 0.0.0.0
+  * 2, 走的是udp
+  * 3, 命令
+    * docker run --name godnslocal --restart always  -p 23153:53 -p 23153:53/udp -v /etc/hosts:/etc/hosts -d godnsimg:v0.0.1
+  * 4, 测试
+    * dig gz003.nsmore.ajojo.top @127.0.0.1 -p 23153
+
 
 
 GODNS
