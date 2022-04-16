@@ -95,14 +95,11 @@ func (s *Server) Run() {
 		panic("网络出错 地址出错")
 	}
 	DNSHOST := os.Getenv("DNSHOST")
-	fmt.Println(DNSHOST)
-	fmt.Println(DNSHOST)
-	fmt.Println(DNSHOST)
-	fmt.Println(DNSHOST)
-	addrJoin := net.JoinHostPort(addrOpt, strconv.Itoa(s.port))
 	if DNSHOST != "" {
+		addrOpt = DNSHOST
 		fmt.Println("使用配置的NDS : ", DNSHOST)
 	}
+	addrJoin := net.JoinHostPort(addrOpt, strconv.Itoa(s.port))
 
 	tcpServer := &dns.Server{Addr: addrJoin,
 		Net:          "tcp",
