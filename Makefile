@@ -1,4 +1,5 @@
 
+
 all:
 	export CGO_ENABLED=0 && go build
 	docker build -t godnsimg:v0.0.1 .
