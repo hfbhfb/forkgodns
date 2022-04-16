@@ -7,9 +7,10 @@
   * 1, 0.0.0.0
   * 2, 走的是udp
   * 3, 命令
-    * docker run --name godnslocal --restart always  -p 23153:53 -p 23153:53/udp -v /etc/hosts:/etc/hosts -d godnsimg:v0.0.1
+    * docker run  --name godnslocal53  --net host --restart always  -p 53:53/udp -v /etc/hosts:/etc/hosts -d godnsimg:v0.0.1
+      * WARNING: Published ports are discarded when using host network mode
   * 4, 测试
-    * dig gz003.nsmore.ajojo.top @127.0.0.1 -p 23153
+    * dig gz003.nsmore.ajojo.top @127.0.0.1 
 
 
 
